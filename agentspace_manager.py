@@ -168,16 +168,16 @@ class AgentspaceManager:
             }
         }
 
-        # Add optional authorizations directly to the adk_agent_definition
-        if auth_ids:
-            adk_definition["authorizations"] = [f"projects/{self.project_id}/locations/{self.location}/authorizations/{auth_id}" for auth_id in auth_ids]
-
         # Assemble the final top-level payload
         payload = {
             "displayName": display_name,
             "description": description,
             "adk_agent_definition": adk_definition
         }
+
+        # Add optional authorizations directly to the adk_agent_definition
+        if auth_ids:
+            payload["authorization_config"] = {"tool_authorizations": [f"projects/{self.project_id}/locations/{self.location}/authorizations/{auth_id}" for auth_id in auth_ids]}
 
         # Add optional icon to the top-level payload
         if icon_uri:

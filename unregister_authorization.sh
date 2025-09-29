@@ -1,0 +1,2 @@
+python3 "04b_unregister_agentoauth.py"
+python3 "03a_unregister_authorization_resource.py"

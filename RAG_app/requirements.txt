@@ -7,6 +7,6 @@ PyYAML
 python-dotenv
 google-cloud-aiplatform[adk,agent_engines]
 google-auth-oauthlib
-google-genai
+google-genai<=1.38
 google-adk
 cloudpickle

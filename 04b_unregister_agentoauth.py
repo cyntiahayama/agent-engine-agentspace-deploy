@@ -1,14 +1,9 @@
-import vertexai
 import os
 from dotenv import load_dotenv
-from google.adk.agents import LlmAgent
-from google.adk.tools import google_search  # Import the tool
-from vertexai import agent_engines
 from agentspace_manager import AgentspaceManager
 
 load_dotenv()
 
-##PROJECT_ID=os.getenv('GOOGLE_CLOUD_PROJECT')
 PROJECT_ID=os.getenv('GOOGLE_CLOUD_PROJECT_NUMBER')
 LOCATION = os.getenv('GOOGLE_CLOUD_LOCATION')
 AGENT_ENGINE_ID = os.getenv('REASONING_ENGINE_ID')
@@ -24,6 +19,7 @@ client = AgentspaceManager(project_id=PROJECT_ID,app_id=AGENTSPACE_APP_ID, locat
 
 resp = client.list_agents()
 
+print(AGENTSPACE_APP_ID)
 
 agents = resp["agents"]
 agents_to_be_removed = []

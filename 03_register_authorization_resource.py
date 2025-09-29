@@ -1,9 +1,5 @@
-import vertexai
 import os
 from dotenv import load_dotenv
-from google.adk.agents import LlmAgent
-from google.adk.tools import google_search  # Import the tool
-from vertexai import agent_engines
 from agentspace_manager import AgentspaceManager
 
 load_dotenv()
@@ -14,7 +10,6 @@ AGENT_ENGINE_ID = os.getenv('REASONING_ENGINE_ID')
 GOOGLE_CLIENT_ID = os.getenv('GOOGLE_CLIENT_ID')
 GOOGLE_CLIENT_SECRET = os.getenv('GOOGLE_CLIENT_SECRET')
 AGENTSPACE_APP_ID = os.getenv('AGENTSPACE_APP_ID')
-AGENT_ENGINE_RESOURCE_NAME = f"projects/{PROJECT_ID}/locations/{LOCATION}/reasoningEngines/{AGENT_ENGINE_ID}"
 AGENT_AUTH_OBJECT_ID = os.getenv('AGENT_AUTH_OBJECT_ID')
 
 auth_object_id = AGENT_AUTH_OBJECT_ID
