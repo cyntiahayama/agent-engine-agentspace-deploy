@@ -1,0 +1,12 @@
+google-cloud-discoveryengine
+google-cloud-storage 
+requests
+pydantic
+pytest
+PyYAML
+python-dotenv
+google-cloud-aiplatform[adk,agent_engines]
+google-auth-oauthlib
+google-genai<=1.38
+google-adk
+cloudpickle
